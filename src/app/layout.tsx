@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider"
-import ThemeToggle from "@/components/ThemeToggle"
+import ThemeToggle from "@/components/ThemeToggle";
 
 const APP_DEFAULT_TITLE = "Finapp";
 const APP_TITLE_TEMPLATE = "%s - Finapp";
 
 import "./globals.css";
 import Dropdown from "@/components/Dropdown";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,9 @@ export default function RootLayout({
           {children}
           <ThemeToggle></ThemeToggle>
           <Dropdown></Dropdown>
+
+          <Link href="/">Home</Link>
+          <Link href="/dashboard">Dashboard</Link>
         </ThemeProvider>
       </body>
     </html>
