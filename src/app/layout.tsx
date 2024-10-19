@@ -1,13 +1,12 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next"
+import Link from "next/link"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/ThemeToggle"
+import "./globals.css"
+import Dropdown from "@/components/Dropdown"
 
-const APP_DEFAULT_TITLE = "Finapp";
-const APP_TITLE_TEMPLATE = "%s - Finapp";
-
-import "./globals.css";
-import Dropdown from "@/components/Dropdown";
-import Link from "next/link";
+const APP_DEFAULT_TITLE = "Finapp"
+const APP_TITLE_TEMPLATE = "%s - Finapp"
 
 export const metadata: Metadata = {
   title: {
@@ -26,11 +25,11 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-};
+}
 
 export const viewport: Viewport = {
   themeColor: "#171717",
-};
+}
 
 export default function RootLayout({
   children,
@@ -40,11 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
           <ThemeToggle></ThemeToggle>
           <Dropdown></Dropdown>
@@ -54,5 +49,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
