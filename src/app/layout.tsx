@@ -41,11 +41,11 @@ export default function RootLayout({
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <ThemeToggle></ThemeToggle>
+          {/* <ThemeToggle></ThemeToggle>
           <Dropdown></Dropdown>
 
           <Link href="/">Home</Link>
-          <Link href="/dashboard">Dashboard</Link>
+          <Link href="/dashboard">Dashboard</Link> */}
         </ThemeProvider>
       </body>
     </html>
