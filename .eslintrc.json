@@ -1,6 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"],
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:perfectionist/recommended-natural-legacy"],
   "rules": {
+    "no-console": "warn",
+    "perfectionist/sort-imports": "off",
     "semi": ["error", "never"]
   }
 }
