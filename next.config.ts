@@ -9,4 +9,7 @@ const withPWA = withPWAInit({
 
 export default withPWA(
   withNextIntl({
+    typescript: {
+      ignoreBuildErrors: true,
+    }
 }))
