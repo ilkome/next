@@ -10,9 +10,11 @@ const APP_DEFAULT_TITLE = "Finapp"
 const APP_TITLE_TEMPLATE = "%s - Finapp"
 
 const nunito = Nunito({
+  subsets: ['cyrillic'],
   variable: '--font-nunito',
 })
 const roboto = Roboto({
+  subsets: ['cyrillic'],
   variable: '--font-roboto',
   weight: '400',
 })
