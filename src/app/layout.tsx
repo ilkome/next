@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
+
 import { ThemeProvider } from "@/components/ThemeProvider"
-import "./globals.css"
+import "@/app/globals.css"
 
 const APP_DEFAULT_TITLE = "Finapp"
 const APP_TITLE_TEMPLATE = "%s - Finapp"
