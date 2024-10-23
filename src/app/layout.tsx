@@ -1,12 +1,21 @@
 import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/ThemeProvider"
+import { Nunito, Roboto } from 'next/font/google'
 import "@/app/globals.css"
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 
 const APP_DEFAULT_TITLE = "Finapp"
 const APP_TITLE_TEMPLATE = "%s - Finapp"
+
+const nunito = Nunito({
+  variable: '--font-nunito',
+})
+const roboto = Roboto({
+  variable: '--font-roboto',
+  weight: '400',
+})
 
 export const metadata: Metadata = {
   appleWebApp: {
@@ -41,15 +50,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <body className={`${nunito.variable} ${roboto.variable} font-default antialiased`}>
       <NextIntlClientProvider messages={messages}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          {/* <ThemeToggle></ThemeToggle>
-          <Dropdown></Dropdown>
-
-          <Link href="/">Home</Link>
-          <Link href="/dashboard">Dashboard</Link> */}
-        </ThemeProvider>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
