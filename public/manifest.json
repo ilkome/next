@@ -1,8 +1,8 @@
 {
   "name": "Finapp",
   "short_name": "Finapp",
-  "theme_color": "#171717",
-  "background_color": "#171717",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
