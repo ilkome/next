@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next"
 
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Nunito, Roboto } from 'next/font/google'
-import "@/app/globals.css"
+import "@/app/(frontend)/globals.css"
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 
