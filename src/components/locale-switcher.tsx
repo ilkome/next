@@ -15,7 +15,7 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div>
+    <div className='flex gap-2'>
       <div onClick={() => onChange('ru')}>ru</div>
       <div onClick={() => onChange('en')}>en</div>
     </div>

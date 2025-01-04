@@ -9,6 +9,15 @@ const withPWA = withPWAInit({
 
 export default withPWA(
   withNextIntl({
+    redirects: async () => {
+      return [
+        {
+          destination: "/dashboard",
+          permanent: true,
+          source: "/",
+        },
+      ]
+    },
     typescript: {
       ignoreBuildErrors: true,
     }

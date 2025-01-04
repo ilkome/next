@@ -34,8 +34,8 @@ export default [
     rules: {
       "comma-spacing": ["error", { "after": true, "before": false }],
       "no-console": "warn",
+      'no-extra-semi': 'error',
       "object-curly-spacing": ["error", "always"],
-      // "perfectionist/sort-imports": "off",
       "semi": ["error", "never"]
     },
   },
